@@ -1,3 +1,6 @@
+// ScrollBarBEGONE
+// Copyright (c) ajaidan0 2020
+
 %hook _UIScrollViewScrollIndicator
 
 -(id)initWithFrame:(CGRect)arg1 { 
