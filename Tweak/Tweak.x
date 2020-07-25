@@ -1,6 +1,10 @@
 // ScrollBarBEGONE
 // Copyright (c) ajaidan0 2020
 
+#import <RemoteLog.h>
+#import <UIKit/UIKit.h>
+
+%group Stinky
 %hook _UIScrollViewScrollIndicator
 
 -(id)initWithFrame:(CGRect)arg1 { 
@@ -9,3 +13,9 @@
 }
 
 %end
+%end
+
+%ctor {
+    RLog(@"Tweak is running.");
+    %init(Stinky);
+}
