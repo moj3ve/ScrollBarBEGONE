@@ -4,18 +4,10 @@
 #import <RemoteLog.h>
 #import <UIKit/UIKit.h>
 
-%group Stinky
 %hook _UIScrollViewScrollIndicator
 
 -(id)initWithFrame:(CGRect)arg1 { 
-    id stinky = nil;
-    return stinky; 
+    return nil;
 }
 
 %end
-%end
-
-%ctor {
-    RLog(@"Tweak is running.");
-    %init(Stinky);
-}
